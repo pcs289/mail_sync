@@ -1,0 +1,31 @@
+[package]
+name = "mail_sync"
+version = "0.1.0"
+edition = "2021"
+
+# Optimize Release Binary
+[profile.release]
+strip = true  # Automatically strip symbols from the binary.
+opt-level = "z"  # Optimize for size.
+lto = true # Enable Link Time Optimization (LTO)
+codegen-units = 1 # Reduce Parallel Code Generation Units
+
+[dependencies]
+# Error & Logs
+anyhow = "1.0"
+tracing = "0.1"
+tracing-log = "0.2"
+tracing-subscriber = { version = "0.3", features = ["time"] }
+time = { version = "0.3.36", features = ["local-offset"] }
+
+# Parse
+serde = { version = "1.0.200", features = ["serde_derive"] }
+toml = "0.8.12"
+
+# CLI
+clap = { version = "4.5.4", features = ["derive"] }
+clap-verbosity-flag = "2.2.0"
+
+# IMAP
+imap = "2.4.1"
+native-tls = "0.2.11"
