@@ -58,6 +58,16 @@ mail_sync -c creds.conf sync
 
 ## Installation
 
+### Download pre-built Binaries
+
+1. Visit [Release](https://github.com/pcs289/mail_sync/releases) page
+2. Download pre-built binary based on your platform:
+    - Windows (`mail_sync.exe`)
+    - Linux AMD64 (`mail_sync_amd64`)
+    - MacOS (`mail_sync_darwin`)
+
+### Build from Source
+
 __Requirements__
 - [Cargo - Rust Build System](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
