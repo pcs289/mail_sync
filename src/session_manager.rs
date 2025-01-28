@@ -59,6 +59,8 @@ impl SessionManager {
             .collect()
     }
 
+
+    /// Yeyeye
     pub fn sync(&mut self) {
 
         let list_included = self.list();
